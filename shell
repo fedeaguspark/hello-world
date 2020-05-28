@@ -1,4 +1,4 @@
 docker run -it -h ${CONTAINER_HOSTNAME} -e "GITHUB_TOKEN=${REEL_GIT_TOKEN}" \
 	    -e "GITHUB_USER=${REEL_GIT_USERNAME}" -e "LOCAL_HOME=${HOME}" -v ~/.aws/:/root/.aws \
 		-v ~/.reel_shell/:/root/.reel_shell \
-	    -v $(shell pwd)/:/reel -w /reel/environments ${EXTRA_DOCKER_ARGS} ${VERSION}
+	    -v $(pwd)/:/reel -w /reel/environments ${EXTRA_DOCKER_ARGS} ${VERSION}
